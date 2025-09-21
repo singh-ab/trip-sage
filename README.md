@@ -1,24 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personalized AI Trip Planner
 
-## Getting Started
+An AI-powered trip planning application that generates personalized, end-to-end travel itineraries tailored to individual budgets, interests, and preferences using Google's Gemini AI.
 
-First, run the development server:
+## 🎯 Features
+
+- **Personalized Itineraries**: Generate day-by-day travel plans based on your destination, budget, duration, and interests
+- **AI-Powered Recommendations**: Uses Gemini 2.5 Flash to create intelligent, contextual travel suggestions
+- **Budget-Aware Planning**: Keeps recommendations within your specified budget with detailed cost breakdowns
+- **Interest-Based Customization**: Adapts to your preferences (heritage, nightlife, adventure, food, beaches, etc.)
+- **Detailed Scheduling**: Provides time-specific activities with locations and estimated costs
+- **Indian Travel Focus**: Specialized for destinations within India with local insights
+
+## 🚀 Getting Started
+
+1. **Install dependencies:**
+
+```bash
+npm install
+# or
+yarn install
+```
+
+1. **Set up environment:**
+
+   - Copy `.env.local.example` to `.env.local`
+   - Add your Gemini API key: `GEMINI_API_KEY=your_key_here`
+   - Get your API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
+
+1. **Run the development server:**
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to access the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🎯 How to Use
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Enter Destination**: Specify where you want to travel (e.g., "Goa, India")
+2. **Set Duration**: Choose how many days you'll be traveling (1-30 days)
+3. **Define Budget**: Enter your budget in Indian Rupees (₹)
+4. **Share Interests**: Describe what you enjoy (heritage sites, nightlife, adventure, food, etc.)
+5. **Generate**: Click "Generate Itinerary" and get your personalized travel plan!
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 15 with App Router, TypeScript, Tailwind CSS v4
+- **Backend**: Next.js API Routes (serverless functions)
+- **AI**: Google Gemini 2.5 Flash via `@google/generative-ai`
+- **Deployment**: Ready for Vercel, Netlify, or any Node.js hosting platform
 
 ## Learn More
 
@@ -29,8 +61,10 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Environment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Create `.env.local` from `.env.local.example` and set `GEMINI_API_KEY` for the Gemini API.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy
+
+Standard Next.js deployment applies. Ensure `GEMINI_API_KEY` is configured on the hosting platform.
